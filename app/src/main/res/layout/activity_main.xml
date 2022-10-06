@@ -1,18 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#3F51B5"
+        android:backgroundTint="@color/teal_200"
+        android:text="Quelle est votre  specialité ?"
+        android:textStyle="bold" />
+
+    <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/radioGroup">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <RadioButton
+            android:id="@+id/DSI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHighlight="#E91E63"
+            android:text="DSI" />
+
+        <RadioButton
+            android:id="@+id/SEM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="SEM"
+            android:textColorHighlight="#E91E63" />
+
+        <RadioButton
+            android:id="@+id/RSI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RSI"
+            android:textColorHighlight="#E91E63" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#3F51B5"
+        android:backgroundTint="@color/teal_200"
+        android:text="Quelle est votre club ? "
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/Microsoft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Microsoft" />
+
+    <CheckBox
+        android:id="@+id/Android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Android" />
+
+    <Button
+        android:id="@+id/afficher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Afficher" />
+</LinearLayout>
